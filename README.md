@@ -21,5 +21,13 @@ The change objects emitted have the properties:
 }
 ```
 
-If {history: true} is set in opts then the stream will first output a 'put' change for each row already present in the database.
+opts:
+
+```
+{
+  gte: <start_key>, // range start
+  lte: <end_key>,  // range end
+  history: true, // stream output a 'put' change for each row already in db
+}
+```
 
